@@ -9,6 +9,9 @@
 </head>
 <body>
     @include('partials-laravel.header')
+    <section>
+        @yield('jumbothron')
+    </section>
     @include('partials-laravel.footer')
 </body>
 </html>
