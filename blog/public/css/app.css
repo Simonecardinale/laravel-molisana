@@ -26,3 +26,35 @@ nav ul li {
   width: 100%;
 }
 
+.container-prodotti {
+  display: flex;
+  justify-content: "center";
+  align-items: "center";
+  flex-wrap: wrap;
+}
+
+.card-prodotti {
+  position: relative;
+  width: calc(100% / 3);
+}
+
+.card-prodotti:hover .layover {
+  opacity: 0.6;
+}
+
+.card-prodotti:hover h2 {
+  display: block;
+}
+
+.card-prodotti h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.img-prodotti {
+  width: 100%;
+}
+

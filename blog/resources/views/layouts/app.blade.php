@@ -12,6 +12,9 @@
     <section>
         @yield('jumbothron')
     </section>
+    <main>
+        @yield('container-prodotti')
+    </main>
     @include('partials-laravel.footer')
 </body>
 </html>
