@@ -1,13 +1,11 @@
 .container-header {
-    display: flex;
+    @include display-flex($justify: center, $align: center);
     flex-direction: column;
-    align-items: center;
 }
 
 nav ul {
     list-style: none;
-    display: flex;
-    justify-content: center;
+    @include display-flex($justify: center, $align: center)
 }
 
 nav ul li {

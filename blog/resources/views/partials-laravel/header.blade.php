@@ -5,9 +5,9 @@
         </div>
         <nav>
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Prodotti</a></li>
-                <li><a href="">News</a></li>
+                <li><a href="{{ route('pagina-home') }}">Home</a></li>
+                <li><a href="{{ route('pagina-prodotti') }}">Prodotti</a></li>
+                <li><a href="{{ route('pagina-news') }}">News</a></li>
             </ul>
         </nav>
     </div>
