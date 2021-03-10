@@ -58,3 +58,20 @@ nav ul li {
   width: 100%;
 }
 
+footer {
+  height: 70px;
+  width: 100%;
+}
+
+footer ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer ul li {
+  padding: 20px;
+}
+

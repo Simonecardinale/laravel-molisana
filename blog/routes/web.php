@@ -145,6 +145,23 @@ Route::get('/prodotti', function () {
 }) -> name('pagina-prodotti');
 
 Route::get('/news', function () {
+    $blog =[
+        [
+            'img' => 'https://cdn.pixabay.com/photo/2017/07/28/14/29/macarons-2548827_960_720.jpg';
+            'titolo' => 'Blogpost',
+            'descrizione' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque aliquid natus laborum modi ex, ipsum dolores. Iste nulla voluptas fugit quibusdam non doloribus voluptatibus similique ut aperiam aspernatur? Reiciendis, quos?'
+        ]
+        [
+            'img' => 'https://cdn.pixabay.com/photo/2017/07/28/14/29/macarons-2548827_960_720.jpg';
+            'titolo' => 'Blogpost',
+            'descrizione' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque aliquid natus laborum modi ex, ipsum dolores. Iste nulla voluptas fugit quibusdam non doloribus voluptatibus similique ut aperiam aspernatur? Reiciendis, quos?'
+        ]
+        [
+            'img' => 'https://cdn.pixabay.com/photo/2017/07/28/14/29/macarons-2548827_960_720.jpg';
+            'titolo' => 'Blogpost',
+            'descrizione' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque aliquid natus laborum modi ex, ipsum dolores. Iste nulla voluptas fugit quibusdam non doloribus voluptatibus similique ut aperiam aspernatur? Reiciendis, quos?'
+        ]
+    ]
     return view('news');
 }) -> name('pagina-news');
 

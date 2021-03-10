@@ -1,0 +1,14 @@
+footer {
+    height: 70px;
+    width: 100%;
+}
+
+footer ul {
+    list-style: none;
+    height: 100%;
+    @include display-flex($justify: center, $align: center);
+}
+
+footer ul li {
+    padding: 20px;
+}
