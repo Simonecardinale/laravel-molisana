@@ -1,0 +1,13 @@
+.container-blog {
+    width: 100%;
+    @include display-flex ($justify: center)
+}
+
+.card-blog {
+    width: calc(100% / 4);
+    margin: 30px;
+}
+
+.card-blog img {
+    width: 100%;
+}
