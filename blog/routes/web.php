@@ -66,5 +66,41 @@ Route::get('/dettaglio/{id}', function ($id) {
 
 }) -> name('pagina-dettaglio');
 
+Route::get('/lunga', function () {
+    $pasta = config('pasta');
+    $data = ['pasta' => $pasta];
 
+    $pasta_lunga = array_filter($pasta, function($item){
+        // dump($item);
+        return $item['tipo'] == 'lunga';
+    });
+    $tipo = ['pasta_lunga' => $pasta_lunga];
+    return view('lunga', $data, $tipo);
+}) -> name('pagina-lunga');
+
+
+Route::get('/corta', function () {
+    $pasta = config('pasta');
+    $data = ['pasta' => $pasta];
+
+    $pasta_corta = array_filter($pasta, function($item){
+        // dump($item);
+        return $item['tipo'] == 'corta';
+    });
+    $tipo = ['pasta_corta' => $pasta_corta];
+    return view('corta', $data, $tipo);
+}) -> name('pagina-corta');
+
+
+Route::get('/cortissima', function () {
+    $pasta = config('pasta');
+    $data = ['pasta' => $pasta];
+
+    $pasta_cortissima = array_filter($pasta, function($item){
+        // dump($item);
+        return $item['tipo'] == 'cortissima';
+    });
+    $tipo = ['pasta_cortissima' => $pasta_cortissima];
+    return view('cortissima', $data, $tipo);
+}) -> name('pagina-cortissima');
 

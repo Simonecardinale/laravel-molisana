@@ -23,6 +23,15 @@
     }
 } 
 
+.container-tipo {
+    @include display-flex ($justify: center);
+}
+
+.tipo-prodotti {
+    margin: 50px;
+    cursor: pointer;
+}
+
 .img-prodotti {
     width: 100%;
 }

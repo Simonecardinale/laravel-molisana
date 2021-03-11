@@ -1,17 +1,19 @@
 @extends('layouts.app')
 
-{{-- @section('tipo-pasta')
-    @foreach ($tipologiaPasta as $key => $element)
-    <h2>{{ $key }}</h2>
-    @endforeach
 
-@endsection --}}
 
 @section('container-prodotti')
-    @foreach ($tipologiaPasta as $key => $element)
-    <h2>{{ $key }}</h2>
+<div class="container-tipo">
+    <h2 class="tipo-prodotti"><a href="{{ route('pagina-lunga') }}">Lunga</a></h2>
+    <h2 class="tipo-prodotti"><a href="{{ route('pagina-corta') }}">Corta</a></h2>
+    <h2 class="tipo-prodotti"><a href="{{ route('pagina-cortissima') }}">Cortissima</a></h2>
+
+    </div>
+    {{-- @foreach ($tipologiaPasta as $key => $element)
+    <h2 class="tipo-prodotti">{{ $key }}</h2> --}}
     <div class="container-prodotti">
-            @foreach ($element as $key=> $item)
+            @foreach ($pasta as $key=> $item)
+            {{-- @foreach ($element as $key=> $item) --}}
                 <div class="card-prodotti">
                     <div class="layover">
                         <img class="img-prodotti" src="{{ $item['src'] }}" alt="">
@@ -20,5 +22,5 @@
                 </div>
             @endforeach
         </div>
-    @endforeach
+        {{-- @endforeach --}}
 @endsection
