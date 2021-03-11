@@ -2,12 +2,12 @@
 
 @section('container-prodotti')
     <div class="container-prodotti">
-        @foreach ($pasta as $item)
+        @foreach ($pasta as $key => $item)
             <div class="card-prodotti">
                 <div class="layover">
                     <img class="img-prodotti" src="{{ $item['src'] }}" alt="">
                 </div>
-                <h2>{{ $item['titolo'] }}</h2>
+                <h2><a href="{{ route('pagina-dettaglio', ['id' =>$key]) }}">{{ $item['titolo'] }}</a></h2>
             </div>
         @endforeach
     </div>

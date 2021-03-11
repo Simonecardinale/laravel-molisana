@@ -15,6 +15,7 @@
     <main>
         @yield('container-prodotti')
         @yield('blogpost')
+        @yield('prodotto-dettaglio')
     </main>
     @include('partials-laravel.footer')
 </body>
