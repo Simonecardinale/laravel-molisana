@@ -19,8 +19,30 @@ Route::get('/', function () {
 
 Route::get('/prodotti', function () {
     $pasta = config('pasta');
-        $data = ['pasta' => $pasta];
-    return view('prodotti', $data);
+    $data = ['pasta' => $pasta];
+
+    $pasta_lunga = array_filter($pasta, function($item){
+        // dump($item);
+        return $item['tipo'] == 'lunga';
+    });
+    $pasta_corta = array_filter($pasta, function($item){
+        // dump($item);
+        return $item['tipo'] == 'corta';
+    });
+    $pasta_cortissima = array_filter($pasta, function($item){
+        // dump($item);
+        return $item['tipo'] == 'cortissima';
+    });
+
+    $tipoPasta = [
+        'tipologiaPasta'=> [
+            'lunga'=> $pasta_lunga,
+            'corta'=> $pasta_corta,
+            'cortissima'=> $pasta_cortissima,
+        ]
+    ];
+
+    return view('prodotti', $data, $tipoPasta);
 }) -> name('pagina-prodotti');
 
 Route::get('/news', function () {

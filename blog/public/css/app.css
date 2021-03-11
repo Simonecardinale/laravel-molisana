@@ -97,5 +97,10 @@ footer ul li {
 
 .container-dettaglio img {
   width: 100%;
+  display: block;
+}
+
+.container-dettaglio h2 {
+  text-align: center;
 }
 
