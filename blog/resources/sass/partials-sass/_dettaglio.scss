@@ -1,5 +1,7 @@
 .container-dettaglio {
     width: 100%;
+    @include display-flex($align: center);
+    flex-direction: column;
 }
 
 .container-dettaglio img {
@@ -7,6 +9,17 @@
     display: block;
 }
 
-.container-dettaglio h2 {
+.container-dettaglio h2, .container-dettaglio p {
     text-align: center;
+}
+
+.icon-container {
+    @include display-flex($align: center, $justify: center);
+    
+}
+
+.icon-set {
+    @include display-flex($align: center);
+    flex-direction: column;
+    margin: 50px;
 }

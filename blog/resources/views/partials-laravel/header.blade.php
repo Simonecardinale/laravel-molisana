@@ -5,9 +5,11 @@
         </div>
         <nav>
             <ul>
-                <li><a href="{{ route('pagina-home') }}">Home</a></li>
-                <li><a href="{{ route('pagina-prodotti') }}">Prodotti</a></li>
-                <li><a href="{{ route('pagina-news') }}">News</a></li>
+                <li><a href="{{ route('pagina-home') }}" class="{{ Request::route() -> getName() == ('pagina-home') ? 'active' : '' }}">
+                    Home
+                </a></li>
+                <li><a href="{{ route('pagina-prodotti') }}" class="{{ Request::route() -> getName() == ('pagina-prodotti') ? 'active' : '' }}">Prodotti</a></li>
+                <li><a href="{{ route('pagina-news') }}" class="{{ Request::route() -> getName() == ('pagina-news') ? 'active' : '' }}">News</a></li>
             </ul>
         </nav>
     </div>

@@ -54,9 +54,16 @@ Route::get('/news', function () {
 
 Route::get('/dettaglio/{id}', function ($id) {
     $pasta = config('pasta');
-    $data = ['formato' => $pasta[$id]];
-    // dd($pasta[$id]);
-    return view('dettaglio', $data);
+
+    if(is_numeric($id) && $id >= 0 && $id < count($pasta)){
+
+        $data = ['formato' => $pasta[$id]];
+        // dd($pasta[$id]);
+        return view('dettaglio', $data);
+    } else {
+        abort('404');
+    }
+
 }) -> name('pagina-dettaglio');
 
 

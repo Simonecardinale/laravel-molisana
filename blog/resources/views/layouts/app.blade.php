@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <title>@yield('title')</title>
+    @yield('css')
 </head>
 <body>
     @include('partials-laravel.header')

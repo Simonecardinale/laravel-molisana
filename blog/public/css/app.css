@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+.active {
+  border-bottom: 2px solid blue;
+}
+
+a {
+  text-decoration: none;
+}
+
 .container-header {
   display: flex;
   justify-content: center;
@@ -93,6 +101,10 @@ footer ul li {
 
 .container-dettaglio {
   width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
 }
 
 .container-dettaglio img {
@@ -100,7 +112,22 @@ footer ul li {
   display: block;
 }
 
-.container-dettaglio h2 {
+.container-dettaglio h2,
+.container-dettaglio p {
   text-align: center;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-set {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin: 50px;
 }
 

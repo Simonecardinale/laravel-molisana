@@ -11,7 +11,7 @@
     @foreach ($tipologiaPasta as $key => $element)
     <h2>{{ $key }}</h2>
     <div class="container-prodotti">
-            @foreach ($element as $item)
+            @foreach ($element as $key=> $item)
                 <div class="card-prodotti">
                     <div class="layover">
                         <img class="img-prodotti" src="{{ $item['src'] }}" alt="">
